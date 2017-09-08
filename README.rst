@@ -34,9 +34,9 @@ Libraries will be installed to:
 
 Sources:
 
-* FooLibraryCpp/CMakeLists.txt - CMake code with C++ library
-* FooLibraryCpp/foo.cpp - define 'foo()' function and Java export call
-* FooLibrary/foo/src/main/java/com/example/foo/Foo.java - Java interface with "native" method
+* `FooLibraryCpp/CMakeLists.txt <https://github.com/forexample/android-aar-simple/blob/master/FooLibraryCpp/CMakeLists.txt>`__ - CMake code with C++ library
+* `FooLibraryCpp/foo.cpp <https://github.com/forexample/android-aar-simple/blob/master/FooLibraryCpp/foo.cpp>`__ - define 'foo()' function and Java export call
+* `FooLibrary/foo/src/main/java/com/example/foo/Foo.java <https://github.com/forexample/android-aar-simple/blob/master/FooLibrary/foo/src/main/java/com/example/foo/Foo.java>`__ - Java interface with "native" method
 
 Use AAR
 -------
