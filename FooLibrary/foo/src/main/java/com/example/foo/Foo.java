@@ -8,7 +8,9 @@ public class Foo {
     public Foo() {
     }
 
-    public int getResult() {
-        return 42;
+    static {
+        System.loadLibrary("foo");
     }
+
+    public native int getResult();
 }
