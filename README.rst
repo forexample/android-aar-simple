@@ -10,6 +10,9 @@ Instructions for creating AAR:
 Create AAR
 ----------
 
+On first run open ``FooLibrary`` project in Android Studio to initialize
+all local settings, then close this project.
+
 Run build script:
 
 .. code-block:: none
