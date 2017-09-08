@@ -1,7 +1,7 @@
 AAR Example
 -----------
 
-Example of creation AAR with C++ `*.so` library.
+Example of creation AAR with C++ ``*.so`` library.
 
 Instructions for creating AAR:
 
