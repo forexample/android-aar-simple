@@ -8,7 +8,7 @@ int foo() {
 #endif
 }
 
-JNIEXPORT jint JNICALL Java_com_example_foo_Foo_getResult(
+extern "C" JNIEXPORT jint JNICALL Java_com_example_foo_Foo_getResult(
     JNIEnv* env, jobject thiz
 ) {
   return foo();
