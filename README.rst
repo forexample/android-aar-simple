@@ -1,7 +1,7 @@
 AAR Example
 -----------
 
-**!!! NOT WORKING !!!**
+Example of creation AAR with C++ `*.so` library.
 
 Instructions for creating AAR:
 
@@ -10,8 +10,30 @@ Instructions for creating AAR:
 Create AAR
 ----------
 
-Open project ``android-aar-simple/FooLibrary`` and click ``Build -> Build APK``.
-This will create AAR, path ``android-aar-simple/FooLibrary/foo/build/outputs/aar/foo-debug.aar``.
+Run build script:
+
+.. code-block:: none
+
+  > cd android-aar-simple
+  [android-aar-simple]> ./create-aar.sh
+  [android-aar-simple]> ls foo-debug.aar
+  foo-debug.aar
+
+Script will run builds with two toolchain:
+
+* android-ndk-r10e-api-21-arm64-v8a
+* android-ndk-r10e-api-19-armeabi-v7a-neon-clang-libcxx
+
+Libraries will be installed to:
+
+* FooLibrary/foo/src/main/jniLibs/arm64-v8a
+* FooLibrary/foo/src/main/jniLibs/armeabi-v7a
+
+Sources:
+
+* FooLibraryCpp/CMakeLists.txt - CMake code with C++ library
+* FooLibraryCpp/foo.cpp - define 'foo()' function and Java export call
+* FooLibrary/foo/src/main/java/com/example/foo/Foo.java - Java interface with "native" method
 
 Use AAR
 -------
@@ -29,10 +51,4 @@ Open project ``android-aar-simple/UseFoo`` and follow instructions for adding AA
 
 * Sync project
 * Build -> Make Project
-
-Error in line ``import com.example.foo``:
-
-.. code-block:: none
-
-  /.../android-aar-simple/UseFoo/app/src/main/java/com/example/usefoo/MainActivity.java
-    Error:(6, 19) error: cannot find symbol class foo
+* Run example on device
